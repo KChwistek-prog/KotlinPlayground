@@ -5,7 +5,7 @@ fun main(args: Array<String>) {
 
     println("Hello World!")
     println(line)
-    val numbers = listOf(1, 2, 3, 4, 5, 6, 7)
+    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
     val invertedOddNumber = numbers
         .filter { it -> it % 2 != 0 }
         .joinToString { "${-it}" }
@@ -42,6 +42,19 @@ fun main(args: Array<String>) {
     """.trimMargin("#")
     println(multilineString)
     println(line)
+
+    val copySet = numbers.toSet()
+    println(copySet)
+    println(line)
+
+    val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key11" to 11)
+    val filteredNumbers = numbersMap.filter { (key,value) -> key.endsWith("1") && value > 10 }
+    println(filteredNumbers)
+
+    println(line)
+    val numbersInString = listOf("one", "two", "three", "four")
+    println(numbersInString.associateWith { it.length })
+
 }
 
 fun getName(): String =
